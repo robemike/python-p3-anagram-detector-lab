@@ -8,3 +8,7 @@ class Anagram:
     def match(self, anagrams):
         sorted_anagrams = [sorted(possible_anagram.lower()) for possible_anagram in anagrams]
         return [anagram for anagram in anagrams if sorted_anagrams[anagrams.index(anagram)] == self.word]
+
+listen = Anagram("listen")
+print(listen)
+print(listen.match(['enlists', 'google', 'inlets', 'banana']))
